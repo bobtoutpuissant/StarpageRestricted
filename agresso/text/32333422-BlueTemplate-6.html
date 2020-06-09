@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index, follow">
+<meta name="generator" content="WebIdeaTree">
+<meta name="description" content="Planifier"> 
+<link href="style.css" rel="stylesheet" type="text/css"> 
+</head> 
+<body class="Body" text="#000000" bgcolor="#ffffff"> 
+<div id="tooltip1"></div>
+<script type="text/javascript" language="JavaScript">
+var curX=0;
+var curY=0;
+var offsetxpoint=-60 //offset of tooltip
+var offsetypoint=20 //offset of tooltip
+var ie=document.all
+var ns6=document.getElementById && !document.all
+var enabletip=false
+if (ie||ns6)
+var tipobj=document.all? document.all["tooltip1"] : document.getElementById? document.getElementById("tooltip1") : ""
+
+function ietruebody(){
+	return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function WIT_Show(msg){
+if (ns6||ie){
+tipobj.innerHTML=msg;
+enabletip=true
+return false
+}
+}
+function WIT_Mouse(e){
+curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
+curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+if (enabletip){
+var rightedge=ie&&!window.opera? ietruebody().clientWidth-event.clientX-offsetxpoint : window.innerWidth-e.clientX-offsetxpoint-20
+var bottomedge=ie&&!window.opera? ietruebody().clientHeight-event.clientY-offsetypoint : window.innerHeight-e.clientY-offsetypoint-20
+var leftedge=(offsetxpoint<0)? offsetxpoint*(-1) : -1000
+if (rightedge<tipobj.offsetWidth)
+	tipobj.style.left=ie? ietruebody().scrollLeft+event.clientX-tipobj.offsetWidth+"px" : window.pageXOffset+e.clientX-tipobj.offsetWidth+"px"
+else if (curX<leftedge)
+	tipobj.style.left="5px"
+else
+	tipobj.style.left=curX+offsetxpoint+"px"
+if (bottomedge<tipobj.offsetHeight)
+	tipobj.style.top=ie? ietruebody().scrollTop+event.clientY-tipobj.offsetHeight-offsetypoint+"px" : window.pageYOffset+e.clientY-tipobj.offsetHeight-offsetypoint+"px"
+else
+	tipobj.style.top=curY+offsetypoint+"px"
+tipobj.style.visibility="visible"
+}
+}
+function WIT_Clear(){
+if (ns6||ie){
+enabletip=false
+tipobj.style.visibility="hidden"
+tipobj.style.left="-1000px"
+tipobj.innerHTML=''
+}
+}
+
+document.onmousemove=WIT_Mouse;
+</script>
+<div id="Container">
+<div class="PageHeader">
+    <script type="text/javascript"
+         src="../extra/niftycube.js">
+</script> <script language="javascript"
+         type="text/javascript">
+//<![CDATA[
+    window.onload=function()
+    {
+    Nifty("div.WITTree","all normal");
+    Nifty("div.TFWidgetTitle","top normal");
+    Nifty("div.TFWidgetValues","bottom normal");
+    }
+    //]]>
+    </script>
+    <table class="TablePanes"
+           cellspacing="0"
+           border="0">
+        <tbody>
+            <tr class="RowPanes">
+                <td width="150"><span>&nbsp;</span></td>
+                <td>
+                    <p align="right"><span class="NavBarPages"> 
+<a href="32333422-Documentation_Agresso_version_1-27.html">Page Précédente
+3.2.2.&nbsp;Valider les temps</a>
+<a href="32333422-Documentation_Agresso_version_1-27.html"><img src="../wit-icons/arrow20a.gif" alt="Page Précédente
+3.2.2.&nbsp;Valider les temps" title="Page Précédente
+3.2.2.&nbsp;Valider les temps" border="0"></a>&nbsp;</span> 
+28&nbsp;/&nbsp;33<span class="NavBarPages"> 
+<a href="32333422-BlueTemplate-7.html"><img src="../wit-icons/arrow20b.gif" alt="Page Suivante
+3.4.&nbsp;Gérer les charges" title="Page Suivante
+3.4.&nbsp;Gérer les charges" border="0"></a>&nbsp;<a href="32333422-BlueTemplate-7.html">Page Suivante
+3.4.&nbsp;Gérer les charges</a> 
+</span> 
+<span class="NavBarPages"> 
+</span> 
+<span class="NavBarUp"> 
+&nbsp;<a href="32333422-BlueTemplate-5.html">Retour
+3.&nbsp;Projets</a>&nbsp; 
+<a href="32333422-BlueTemplate-5.html"><img src="../wit-icons/arrow20c.gif" alt="Retour
+3.&nbsp;Projets" title="Retour
+3.&nbsp;Projets" border="0"></a></span> 
+&nbsp;</p>
+                </td>
+            </tr>
+            <tr class="RowPanes">
+                <td colspan="3"><script type="text/javascript" src="../extra/jquery.min.js">
+</script>
+<script type="text/javascript" src="../extra/ddsmoothmenu.js">
+/***********************************************
+ * DD Smooth Navigational Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+ * This notice MUST stay intact for legal use
+ * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+ ***********************************************/
+</script>
+
+<div id="witSmoothMenu" class="WITddsm">
+<ul>
+<li><a class="witSmoothMenuEntry" href="index.html">AGRESSO</a>
+</li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-23.html">Généralités</a>
+  <ul>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-25.html">Ecran d'accueil</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-32.html">Définitions et acronymes</a>    </li>
+  </ul>
+  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso1-21.html">Achats</a>
+  <ul>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-11.html">Articles</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-9.html">Catégories d'articles</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-12.html">Demande d'achat ou demande de réapprovisionnement</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-13.html">Commandes d'achat</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-38.html">Livraison / Réception</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-40.html">Factures fournisseurs</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-41.html">Paiement fournisseurs</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-43.html">Groupage, colisage, transport, douanes</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-42.html">Gestion des plans de prévention</a>    </li>
+  </ul>
+  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-5.html">Projets</a>
+  <ul>
+    <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-8.html">Notions</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-10.html">Récupérer les temps</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-6.html">Planifier</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-7.html">Gérer les charges</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-34.html">Facturer</a>    </li>
+  </ul>
+  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-35.html">Quoi de neuf dans la doc ?</a>  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-37.html">Trucs et astuces</a>  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-44.html">Nouveautés</a>  </li>
+</ul>
+<br style="clear: left" />
+</div>
+<script type="text/javascript">
+ddsmoothmenu.init({
+	mainmenuid: "witSmoothMenu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to 'h' or 'v'
+	classname: 'WITddsm', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+</td>
+            </tr>
+        </tbody>
+    </table></div>
+<table class="TablePanes" cellspacing="0"><tr class="RowPanes">
+<td class="PageLeftPane">  
+
+    <p class="Text"><script type="text/javascript" src="../extra/simpletreemenu.js">
+/***********************************************
+ * Simple Tree Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+ * This notice MUST stay intact for legal use
+ * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+ ***********************************************/
+</script>
+
+<div class="WITTree">
+
+<div class="WITTreeInner">
+<ul id="treemenu1" class="treeview">
+  <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-23.html">Généralités</a>
+  <ul>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-25.html">Ecran d'accueil</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-32.html">Définitions et acronymes</a>    </li>
+  </ul>
+  </li>
+  <li><a class="WITTreeLink" href="32333422-Documentation_Agresso1-21.html">Achats</a>
+  <ul>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso-11.html">Articles</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-BlueTemplate-9.html">Catégories d'articles</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso-12.html">Demande d'achat ou demande de réapprovisionnement</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso-13.html">Commandes d'achat</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-38.html">Livraison / Réception</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-40.html">Factures fournisseurs</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-41.html">Paiement fournisseurs</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-43.html">Groupage, colisage, transport, douanes</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-42.html">Gestion des plans de prévention</a>    </li>
+  </ul>
+  </li>
+  <li><a class="WITTreeLink" href="32333422-BlueTemplate-5.html">Projets</a>
+  <ul>
+    <li><a class="WITTreeLink" href="32333422-BlueTemplate-8.html">Notions</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso-10.html">Récupérer les temps</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-BlueTemplate-6.html">Planifier</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-BlueTemplate-7.html">Gérer les charges</a>    </li>
+    <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-34.html">Facturer</a>    </li>
+  </ul>
+  </li>
+  <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-35.html">Quoi de neuf dans la doc ?</a>  </li>
+  <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-37.html">Trucs et astuces</a>  </li>
+  <li><a class="WITTreeLink" href="32333422-Documentation_Agresso_version_1-44.html">Nouveautés</a>  </li>
+</ul>
+<script type="text/javascript">
+ddtreemenu.createTree("treemenu1", true);
+</script>
+</div>
+</div>
+
+    <br />
+    <br /></p>
+    <p class="Text">&nbsp;</p>
+    <p class="Text">&nbsp;</p>
+</div></td>  
+<td class="PageMiddlePane"> 
+<div class="Idea"> <a name="32333422-BlueTemplate-6" id="32333422-BlueTemplate-6"></a> 
+<div class="HierarchyGroup"> 
+<div class="HierarchyPos"> <a href="index.html">AGRESSO</a></div> 
+<div class="HierarchyPos"> &nbsp;&nbsp;&nbsp;&nbsp;<img src="../wit-icons/02.png"> &nbsp;3.&nbsp;<a href="32333422-BlueTemplate-5.html">Projets</a></div> 
+</div> 
+<div class="H1"><span class="H2"><img src="../wit-icons/02.png"> &nbsp;3.3.&nbsp;Planifier</span>&nbsp;</div>
+<div class="TextGroup"> 
+<p class="MsoNormal">Pour la gestion du planning et des charges cliquer sur «&nbsp;<strong style="mso-bidi-font-weight: normal">Gestion de Projet</strong>&nbsp;»<?xml:namespace prefix = o /?>
+</p>
+<p class="MsoNormal"><strong>Quelques notions et quelques définitions utiles</strong></p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 71.25pt; mso-add-space: auto; mso-list: l0 level1 lfo1"
+   class="MsoListParagraphCxSpFirst"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">1.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span>
+   AXES</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">a.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> Dans
+   Agresso, un axe correspond à un code de regroupement dit «&nbsp;ANALYTIQUE&nbsp;».</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">b.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> Les axes
+   définis dans Agresso sont&nbsp;:</p>
+<p style="TEXT-INDENT: -143.25pt; MARGIN-LEFT: 143.25pt; mso-add-space: auto; mso-list: l0 level3 lfo1; mso-text-indent-alt: -9.0pt"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore"><span style=
+   "FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   i.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> BU (Business Unit)&nbsp;</p>
+<p style="TEXT-INDENT: -143.25pt; MARGIN-LEFT: 143.25pt; mso-add-space: auto; mso-list: l0 level3 lfo1; mso-text-indent-alt: -9.0pt"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore"><span style=
+   "FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   ii.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> PROJET</p>
+<p style="TEXT-INDENT: -143.25pt; MARGIN-LEFT: 143.25pt; mso-add-space: auto; mso-list: l0 level3 lfo1; mso-text-indent-alt: -9.0pt"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore"><span style=
+   "FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   iii.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> RESSOURCE<span style="mso-tab-count: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+<p style="TEXT-INDENT: -143.25pt; MARGIN-LEFT: 143.25pt; mso-add-space: auto; mso-list: l0 level3 lfo1; mso-text-indent-alt: -9.0pt"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore"><span style=
+   "FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   iv.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> ORDRE de TRAVAIL (OT)</p>
+<p style="TEXT-INDENT: -143.25pt; MARGIN-LEFT: 143.25pt; mso-add-space: auto; mso-list: l0 level3 lfo1; mso-text-indent-alt: -9.0pt"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore"><span style=
+   "FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+   v.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> ACTIVITE</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">c.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span>
+   L’activité dans Agresso correspond donc&nbsp;à un regroupement. Exemple&nbsp;: on peut créer une activité SPECIFICATION dans 1, 2 ou x Ordres de Travail, y allouer les charges et ainsi connaitre le coût de l’ensemble des SPECIFICATION du projet.</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 71.25pt; mso-add-space: auto; mso-list: l0 level1 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">2.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span>
+   PLANNING BROUILLON</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">a.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> Le
+   planning «&nbsp;BROUILLON&nbsp;» est un planning non validé.</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">b.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> Un planning
+   BROUILLON peut être supprimé</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">c.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> Le
+   planning BROUILLON permet de définir la planification du projet</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">d.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> On ne peut
+   allouer des charges sur un planning BROUILLON</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 71.25pt; mso-add-space: auto; mso-list: l0 level1 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">3.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span>
+   PLANNING VALIDE</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">a.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> Un
+   planning VALIDE ne peut être supprimé</p>
+<p style="TEXT-INDENT: -18pt; MARGIN-LEFT: 107.25pt; mso-add-space: auto; mso-list: l0 level2 lfo1"
+   class="MsoListParagraphCxSpMiddle"><span style="mso-bidi-font-family: Calibri; mso-bidi-theme-font: minor-latin"><span style="mso-list: Ignore">b.<span style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span></span> On peut
+   allouer des charges sur un planning VALIDE</p>
+<h1>PLANIFICATION</h1>
+<p class="MsoNormal"></p>
+<p class="MsoNormal">La vision «&nbsp;Budget Projet&nbsp;» donne accès aux modes <strong style="mso-bidi-font-weight: normal">Planning</strong> et <strong style="mso-bidi-font-weight: normal">Charges</strong></p>
+<p class="MsoNormal">Cliquer sur «&nbsp;<strong style="mso-bidi-font-weight: normal">Budget Projet</strong>&nbsp;»</p>
+<p class="MsoNormal">Agresso affiche alors tous les projets actifs dont vous avez la responsabilité</p>
+<p class="MsoNormal"></p>
+<p class="MsoNormal">Pour créer un planning, cliquer sur la double flèche verticale d’un projet</p>
+<p class="MsoNormal"></p>
+<p class="MsoNormal">Cliquer sur nouveau plan et saisissez les zones «&nbsp;Code de plan&nbsp;» et Plan de projet&nbsp;» (les valeurs obligatoires ont un astérisque rouge), puis cliquer sur «&nbsp;OK&nbsp;»</p>
+<p class="MsoNormal"></p>
+<p class="MsoNormal"></p>
+<p class="MsoNormal">Le planning se crée en affichant la barre pour le projet. On peut moduler l’affichage en cliquant sur semaine, mois ou année&nbsp;; La double flèche permet d’afficher le projet sur toute sa durée.</p>
+<p class="MsoNormal">&gt;&gt; pour planifier les ordres de travail, faire un clic droit sur la ligne projet ce qui fait apparaitre&nbsp;:puis cliquer sur ajouter des sous taches</p>
+<p class="MsoNormal"><span style="mso-spacerun: yes">&nbsp;</span>Les OT apparaissent. A noter que les OT en 3 chiffres ou sous forme «&nbsp;PROJET-Wxx&nbsp;» correspondent à des OT de dépenses alors que ceux sous forme «&nbsp;PROJET-Fxx&nbsp;»
+correspondent à la facturation. Cliquez sur ceux que vous voulez planifier puis sur «&nbsp;OK&nbsp;». Les lignes choisies s’ajoutent au graphe.</p>
+<p class="MsoNormal">Pour chaque ligne, définir&nbsp;l’effort (la durée)</p>
+<p class="MsoNormal">On peut aussi préciser la date de démarrage</p>
+<p class="MsoNormal">&nbsp;Pour créer un lien ou enchainement entre 2 activités, déplacer la souris sur l’extrémité droite de l’activité (le curseur devient une main) et tout en laissant le clic gauche appuyé, déplacer vers le début de l’activité
+suivante</p>
+<p class="MsoNormal"></p>
+<p class="MsoNormal">A noter qu’il n’est possible de créer des enchainements de type FIN DEBUT (le début de l’activité SUIVANTE ne démarrera qu’à la fin de l’activité PRECEDENTE). Les liens FIN DEBUT permettent une bonne lisibilité des plannings.</p>
+<p class="MsoNormal">A noter aussi que si on supprime le lien (appelé ici dépendance), le début de l’activité SUIVANTE restera à sa place et ne se «&nbsp;recollera&nbsp;» pas au début du planning.</p>
+<p class="MsoNormal">N’oubliez pas de temps en temps d’enregistrer vos données&nbsp;; en cliquant sur «&nbsp;enregistrer&nbsp;» vous aurez ce message cela sauvera les données Planning.</p>
+<p class="MsoNormal"><span style="mso-fareast-language: FR; mso-no-proof: yes"><span style="mso-spacerun: yes">&nbsp;</span></span></p>
+<p class="MsoNormal">&nbsp;</p>
+<p class="MsoNormal">&nbsp;</p>
+</div> 
+</div> 
+
+<div class="NavBarGroup"> 
+<span class="NavBarPages"> 
+<a href="32333422-Documentation_Agresso_version_1-27.html">Page Précédente
+3.2.2.&nbsp;Valider les temps</a>
+<a href="32333422-Documentation_Agresso_version_1-27.html"><img src="../wit-icons/arrow20a.gif" alt="Page Précédente
+3.2.2.&nbsp;Valider les temps" title="Page Précédente
+3.2.2.&nbsp;Valider les temps" border="0"></a>&nbsp;<span class="NavBarNumbers"> 
+&nbsp;<a onmouseover="WIT_Show('<font color=gray>3.1.&nbsp;</font>Notions');" onmouseout="WIT_Clear();" href="32333422-BlueTemplate-8.html">1</a>&nbsp;&nbsp;<a onmouseover="WIT_Show('<font color=gray>3.2.&nbsp;</font>Récupérer les temps');" onmouseout="WIT_Clear();" href="32333422-Documentation_Agresso-10.html">2</a>&nbsp;&nbsp;3&nbsp;&nbsp;<a onmouseover="WIT_Show('<font color=gray>3.4.&nbsp;</font>Gérer les charges');" onmouseout="WIT_Clear();" href="32333422-BlueTemplate-7.html">4</a>&nbsp;&nbsp;<a onmouseover="WIT_Show('<font color=gray>3.5.&nbsp;</font>Facturer');" onmouseout="WIT_Clear();" href="32333422-Documentation_Agresso_version_1-34.html">5</a>&nbsp;</span> 
+<a href="32333422-BlueTemplate-7.html"><img src="../wit-icons/arrow20b.gif" alt="Page Suivante
+3.4.&nbsp;Gérer les charges" title="Page Suivante
+3.4.&nbsp;Gérer les charges" border="0"></a>&nbsp;<a href="32333422-BlueTemplate-7.html">Page Suivante
+3.4.&nbsp;Gérer les charges</a> 
+</span> 
+<span class="NavBarUp"> 
+&nbsp;<a href="32333422-BlueTemplate-5.html">Retour
+3.&nbsp;Projets</a>&nbsp; 
+<a href="32333422-BlueTemplate-5.html"><img src="../wit-icons/arrow20c.gif" alt="Retour
+3.&nbsp;Projets" title="Retour
+3.&nbsp;Projets" border="0"></a></span> 
+</div> 
+<div class="IndexesGroup"> 
+<span class="IndexToc"><a href="wit-toc.html">Table des Matières</a>
+</span>
+&nbsp;|&nbsp;<span class="IndexKeywords"><a href="wit-index-keywords.html">Index</a>
+</span>
+</div> 
+<div class="Separator"><hr></div>
+</td> 
+<td class="PageRightPane"> 
+<p>&nbsp;</p></td> 
+</tr></table> 
+<div class="PageFooter">
+    <table class="TablePanes"
+           cellspacing="0"
+           border="0">
+        <tbody>
+            <tr class="RowPanes">
+                <td></td>
+                <td>
+                    <p class="Text"><span style=
+                    'FONT-SIZE: 11pt; FONT-FAMILY: "Tahoma","sans-serif"; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA'>&nbsp;</span> Created on
+                    2015/10/15 22:32, revised on 2015/10/19 15:00, revision #<font color="#FF0000">3</font>&nbsp;</p>
+                    <p class="Text">&nbsp;</p>
+                </td>
+            </tr>
+        </tbody>
+    </table></div> 
+<!-- Conçu & construit avec WebIdeaTree  --> 
+<div class="Copyright">Conçu & construit avec <a href="http://www.webideatree.com">WebIdeaTree</a> (Licence personnelle).</div> 
+</div> 
+</body></html> 

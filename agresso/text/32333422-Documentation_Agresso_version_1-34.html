@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="robots" content="index, follow">
+<meta name="generator" content="WebIdeaTree">
+<meta name="description" content="Facturer"> 
+<title>Facturer</title> 
+<link href="style.css" rel="stylesheet" type="text/css"> 
+</head> 
+<body class="Body" text="#000000" bgcolor="#ffffff"> 
+<div id="tooltip1"></div>
+<script type="text/javascript" language="JavaScript">
+var curX=0;
+var curY=0;
+var offsetxpoint=-60 //offset of tooltip
+var offsetypoint=20 //offset of tooltip
+var ie=document.all
+var ns6=document.getElementById && !document.all
+var enabletip=false
+if (ie||ns6)
+var tipobj=document.all? document.all["tooltip1"] : document.getElementById? document.getElementById("tooltip1") : ""
+
+function ietruebody(){
+	return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function WIT_Show(msg){
+if (ns6||ie){
+tipobj.innerHTML=msg;
+enabletip=true
+return false
+}
+}
+function WIT_Mouse(e){
+curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
+curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+if (enabletip){
+var rightedge=ie&&!window.opera? ietruebody().clientWidth-event.clientX-offsetxpoint : window.innerWidth-e.clientX-offsetxpoint-20
+var bottomedge=ie&&!window.opera? ietruebody().clientHeight-event.clientY-offsetypoint : window.innerHeight-e.clientY-offsetypoint-20
+var leftedge=(offsetxpoint<0)? offsetxpoint*(-1) : -1000
+if (rightedge<tipobj.offsetWidth)
+	tipobj.style.left=ie? ietruebody().scrollLeft+event.clientX-tipobj.offsetWidth+"px" : window.pageXOffset+e.clientX-tipobj.offsetWidth+"px"
+else if (curX<leftedge)
+	tipobj.style.left="5px"
+else
+	tipobj.style.left=curX+offsetxpoint+"px"
+if (bottomedge<tipobj.offsetHeight)
+	tipobj.style.top=ie? ietruebody().scrollTop+event.clientY-tipobj.offsetHeight-offsetypoint+"px" : window.pageYOffset+e.clientY-tipobj.offsetHeight-offsetypoint+"px"
+else
+	tipobj.style.top=curY+offsetypoint+"px"
+tipobj.style.visibility="visible"
+}
+}
+function WIT_Clear(){
+if (ns6||ie){
+enabletip=false
+tipobj.style.visibility="hidden"
+tipobj.style.left="-1000px"
+tipobj.innerHTML=''
+}
+}
+
+document.onmousemove=WIT_Mouse;
+</script>
+<div id="Container">
+<div class="PageHeader">
+    <script type="text/javascript"
+         src="../extra/niftycube.js">
+</script> <script language="javascript"
+         type="text/javascript">
+//<![CDATA[
+    window.onload=function()
+    {
+    Nifty("div.WITTree","all normal");
+    Nifty("div.TFWidgetTitle","top normal");
+    Nifty("div.TFWidgetValues","bottom normal");
+    }
+    //]]>
+    </script>
+    <table class="TablePanes"
+           cellspacing="0"
+           border="0">
+        <tbody>
+            <tr class="RowPanes">
+                <td width="150"><span>&nbsp;</span></td>
+                <td>
+                    <p align="right"><span class="NavBarPages"> 
+<a href="32333422-Documentation_Agresso_version_1-27.html"><img src="../wit-icons/a2-back.gif" alt="Page Précédente
+3.2.2.&nbsp;Valider les temps" title="Page Précédente
+3.2.2.&nbsp;Valider les temps" border="0"></a>&nbsp;</span> 
+29&nbsp;/&nbsp;33<span class="NavBarPages"> 
+<a href="32333422-Documentation_Agresso_version_1-46.html"><img src="../wit-icons/a2-forw.gif" alt="Page Suivante
+3.4.&nbsp;Piloter les projets" title="Page Suivante
+3.4.&nbsp;Piloter les projets" border="0"></a></span> 
+<span class="NavBarPages"> 
+</span> 
+<span class="NavBarUp"> 
+<a href="32333422-BlueTemplate-5.html"><img src="../wit-icons/a2-up.gif" alt="Retour
+3.&nbsp;Projets" title="Retour
+3.&nbsp;Projets" border="0"></a></span> 
+&nbsp;</p>
+                </td>
+            </tr>
+            <tr class="RowPanes">
+                <td colspan="3"><script type="text/javascript" src="../extra/jquery.min.js">
+</script>
+<script type="text/javascript" src="../extra/ddsmoothmenu.js">
+/***********************************************
+ * DD Smooth Navigational Menu- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+ * This notice MUST stay intact for legal use
+ * Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+ ***********************************************/
+</script>
+
+<div id="witSmoothMenu" class="WITddsm">
+<ul>
+<li><a class="witSmoothMenuEntry" href="index.html">AGRESSO</a>
+</li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-23.html">Généralités</a>
+  <ul>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-25.html">Ecran d'accueil</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-32.html">Définitions et acronymes</a>    </li>
+  </ul>
+  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso1-21.html">Achats</a>
+  <ul>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-47.html">Référencer un fournisseur</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-11.html">Articles</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-9.html">Catégories d'articles</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-12.html">Demande d'achat ou demande de réapprovisionnement</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-13.html">Commandes d'achat</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-38.html">Livraison / Réception</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-40.html">Factures fournisseurs</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-41.html">Paiement fournisseurs</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-43.html">Groupage, colisage, transport, douanes</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-42.html">Gestion des plans de prévention</a>    </li>
+  </ul>
+  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-5.html">Projets</a>
+  <ul>
+    <li><a class="witSmoothMenuEntry" href="32333422-BlueTemplate-8.html">Notions</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso-10.html">Récupérer les temps</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-34.html">Facturer</a>    </li>
+    <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-46.html">Piloter les projets</a>    </li>
+  </ul>
+  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-35.html">Quoi de neuf dans la doc ?</a>  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-37.html">Trucs et astuces</a>  </li>
+  <li><a class="witSmoothMenuEntry" href="32333422-Documentation_Agresso_version_1-44.html">Nouveautés</a>  </li>
+</ul>
+<br style="clear: left" />
+</div>
+<script type="text/javascript">
+ddsmoothmenu.init({
+	mainmenuid: "witSmoothMenu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to 'h' or 'v'
+	classname: 'WITddsm', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+</td>
+            </tr>
+        </tbody>
+    </table></div>
+<div class="Separator"> <img src="../wit-icons/ruler7.gif"></div>
+<div class="PageMiddlePane"> 
+<div class="Idea"> <a name="32333422-Documentation_Agresso_version_1-34" id="32333422-Documentation_Agresso_version_1-34"></a> 
+<div class="HierarchyGroup"> 
+<div class="HierarchyPos"> <a href="index.html">AGRESSO</a></div> 
+<div class="HierarchyPos"> &nbsp;&nbsp;&nbsp;&nbsp;<img src="../wit-icons/Puce.gif"> &nbsp;3.&nbsp;<a href="32333422-BlueTemplate-5.html">Projets</a></div> 
+</div> 
+<div class="H1"><span class="H2"><img src="../wit-icons/bullet2.gif">&nbsp;3.3.&nbsp;Facturer</span>&nbsp;</div>
+<div class="TextGroup"> 
+<p class="Text"><font color="#FF0000">Facturer les projets</font></p>
+<p class="Text">Les projets sont découpés en Ordres de Travail (OT)</p>
+<p class="Text">On associe à chaque OT, 1 ou plusieurs échéances de facturation</p>
+<p class="Text">Toute commande client est donc saisie dans une échéance de facturation sur l'OT du Projet avec les événements et les dates de facturation associés</p>
+<p class="Text">Dans les BU SSA et SOP, un mail automatique est envoyé vers le chef d'affaire pour lui demander si on peut ou non facturer</p>
+<p class="Text">Si on ne peut pas, le chef d'affaire doit renvoyer le mail au controleur avec les nouvelles dates de facturation.</p>
+<p class="Text">En cas d'accord du chef d'affaire, la DAF déclenche la facturation de l'événement associé</p>
+<p class="Text">&nbsp;</p>
+<p class="Text">&nbsp;</p>
+</div> 
+</div> 
+
+<div class="Separator"> <img src="../wit-icons/ruler7.gif"></div>
+<div class="NavBarGroup"> 
+<span class="NavBarPages"> 
+<a href="32333422-Documentation_Agresso_version_1-27.html"><img src="../wit-icons/a2-back.gif" alt="Page Précédente
+3.2.2.&nbsp;Valider les temps" title="Page Précédente
+3.2.2.&nbsp;Valider les temps" border="0"></a>&nbsp;<span class="NavBarNumbers"> 
+&nbsp;<a onmouseover="WIT_Show('<font color=gray>3.1.&nbsp;</font>Notions');" onmouseout="WIT_Clear();" href="32333422-BlueTemplate-8.html">1</a>&nbsp;&nbsp;<a onmouseover="WIT_Show('<font color=gray>3.2.&nbsp;</font>Récupérer les temps');" onmouseout="WIT_Clear();" href="32333422-Documentation_Agresso-10.html">2</a>&nbsp;&nbsp;3&nbsp;&nbsp;<a onmouseover="WIT_Show('<font color=gray>3.4.&nbsp;</font>Piloter les projets');" onmouseout="WIT_Clear();" href="32333422-Documentation_Agresso_version_1-46.html">4</a>&nbsp;</span> 
+<a href="32333422-Documentation_Agresso_version_1-46.html"><img src="../wit-icons/a2-forw.gif" alt="Page Suivante
+3.4.&nbsp;Piloter les projets" title="Page Suivante
+3.4.&nbsp;Piloter les projets" border="0"></a></span> 
+<span class="NavBarUp"> 
+<a href="32333422-BlueTemplate-5.html"><img src="../wit-icons/a2-up.gif" alt="Retour
+3.&nbsp;Projets" title="Retour
+3.&nbsp;Projets" border="0"></a></span> 
+</div> 
+<div class="IndexesGroup"> 
+<span class="IndexToc"><a href="wit-toc.html">Table des Matières</a>
+</span>
+&nbsp;|&nbsp;<span class="IndexToc"><a href="wit-toc-images.html">Images</a>
+</span>
+&nbsp;|&nbsp;<span class="IndexKeywords"><a href="wit-index-keywords.html">Index</a>
+</span>
+</div> 
+<div class="Separator"> <img src="../wit-icons/ruler7.gif"></div>
+</div> 
+<div class="PageFooter">
+    <table class="TablePanes"
+           cellspacing="0"
+           border="0">
+        <tbody>
+            <tr class="RowPanes">
+                <td></td>
+                <td>
+                    <p class="Text"><span style=
+                    'FONT-SIZE: 11pt; FONT-FAMILY: "Tahoma","sans-serif"; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: "Times New Roman"; mso-ansi-language: FR; mso-fareast-language: FR; mso-bidi-language: AR-SA'>&nbsp;</span> Created on
+                    2015/10/19 17:14, revised on 2017/06/12 15:01, revision #<font color="#FF0000">2</font>&nbsp;</p>
+                    <p class="Text">&nbsp;</p>
+                </td>
+            </tr>
+        </tbody>
+    </table></div> 
+<!-- Conçu & construit avec WebIdeaTree  --> 
+<div class="Copyright">Conçu & construit avec <a href="http://www.webideatree.com">WebIdeaTree</a> (Licence personnelle).</div> 
+</div> 
+</body></html> 
